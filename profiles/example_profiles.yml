@@ -1,0 +1,15 @@
+airbnb:
+  target: dev
+  outputs:
+    dev:
+      type: glue
+      role_arn: arn:aws:iam::*:role/dbt_glue_servicerole
+      region: us-east-1
+      workers: 2
+      worker_type: G.1X
+      idle_timeout: 10
+      schema: "airbnb"
+      session_provisioning_timeout_in_seconds: 120
+      location: "s3://BUCKET"
+      seed_format: parquet
+      seed_mode: overwrite

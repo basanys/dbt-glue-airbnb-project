@@ -1,0 +1,7 @@
+profiles/profiles.yml
+terraform/.terraform/*
+terraform/.terraform*
+terraform/terraform.*
+target/
+dbt_packages/
+logs/
